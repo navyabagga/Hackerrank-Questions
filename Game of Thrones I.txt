@@ -1,0 +1,20 @@
+********Game of Thrones-I********
+s=str(input())
+d={}
+for i in s:
+    if i in d:
+        d[i]+=1
+    else:
+        d[i]=1
+lis=list(d.values())
+odd=0
+even=0
+for i in lis:
+    if i%2==0:
+        even+=1
+    else:
+        odd+=1
+if odd>1:
+    print("NO")
+else:
+    print("YES")

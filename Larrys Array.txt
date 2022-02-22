@@ -1,0 +1,16 @@
+*********Larry's Array**********
+t=int(input())
+for k in range(t):
+    n=int(input())
+    lis=list(map(int,input().split()))
+    inv=[]
+    for i in range(len(lis)):
+        count=0
+        for j in range(i,len(lis)):
+            if lis[i]>lis[j]:
+                count+=1
+        inv.append(count)
+    if sum(inv)%2==0:
+        print("YES")
+    else:
+        print("NO")
