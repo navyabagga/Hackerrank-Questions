@@ -1,0 +1,9 @@
+*******Max Min*******
+def maxMin(k, arr):
+    k-=1
+    arr.sort()
+    print(arr)
+    m=float("inf")
+    for i in range(len(arr)-k):
+        m=min(m,arr[i+k]-arr[i])
+    return m
