@@ -1,0 +1,28 @@
+*********Balanced Brackets**********
+def isBalanced(st):
+    lis=[]
+    count=0
+    for i in st:
+        if i=="(" or i=="{" or i=="[":
+            lis.append(i)
+        elif (i==")" and len(lis)>0):
+            if lis[-1]!="(":
+                return "NO"
+            else:
+                lis.pop()
+        elif i=="}" and len(lis)>0:
+            if lis[-1]!="{":
+                return "NO"
+            else:
+                lis.pop()
+        elif i=="]" and len(lis)>0:
+            if lis[-1]!="[":
+                return "NO"
+            else:
+                lis.pop()
+        elif (i=="]" or i=="}" or i==")")  and len(lis)==0:
+            return "NO"
+    if len(lis)==0:
+        return "YES"
+    else:
+        return "NO"
