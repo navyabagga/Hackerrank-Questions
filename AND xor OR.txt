@@ -1,0 +1,12 @@
+*********AND xor OR*********
+def andXorOr(a):
+    ans=float("-inf")
+    stack=[]
+    for i in range(len(a)):
+        while len(stack)>0 and a[i]<stack[-1]:
+            x=stack.pop()
+            ans=max(ans,a[i]^x)
+        if len(stack)>0:
+            ans=max(ans,a[i]^stack[-1])
+        stack.append(a[i])
+    return ans
