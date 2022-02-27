@@ -1,0 +1,10 @@
+*******Circular Array Rotation*********
+def circularArrayRotation(a, k, queries):
+    k=k%len(a)
+    print(k)
+    x=len(a)-k
+    a=a[x:]+a[:x]
+    lis=[]
+    for i in queries:
+        lis.append(a[i])
+    return(lis)
