@@ -1,0 +1,7 @@
+*******Camel Case******
+def camelcase(s):
+    count=0
+    for i in s:
+        if i==i.upper():
+            count+=1
+    return count+1
